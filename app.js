@@ -22,4 +22,4 @@ app.get('/', (req, res) => res.send('Hello World!'))
 mongoose.connect('mongodb+srv://Albelkasy:niDzXFwsDmBnmh8N@cluster0.5tl86zq.mongodb.net/?retryWrites=true&w=majority').then(() => {
     console.log('connected');
 })
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(process.env.PORT||port, () => console.log(`Example app listening on port ${port}!`))
