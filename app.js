@@ -19,7 +19,7 @@ const upload = multer({ dest: '/images', storage })
 app.use(upload.single('img'))
 app.use(require('./router/app.routes'))
 app.get('/', (req, res) => res.send('Hello World!'))
-mongoose.connect('mongodb://127.0.0.1:27017/hooks').then(() => {
+mongoose.connect('mongodb://127.0.0.1/hooks').then(() => {
     console.log('connected');
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
